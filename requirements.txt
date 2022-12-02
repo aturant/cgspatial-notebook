@@ -1,0 +1,17 @@
+shapely
+geopandas
+rasterio
+ipyleaflet
+scikit-learn
+scikit-image
+#statmodels 3.9 :()
+SQLAlchemy
+psycopg2
+pcse
+jupyterhub>=1.0.0
+plotly-express
+#xgboost
+#torch 
+#torchvision
+#Keras
+#tensorflow
