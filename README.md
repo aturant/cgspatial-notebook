@@ -6,6 +6,7 @@
 
 # cgspatial-notebook
 `cgspatial-notebook` is a community Jupyter Docker Stack image. The image includes major geospatial Python &amp; R libraries  on top of the datascience-notebook image. It also contains libraries that allow operations over climatic data.
+Image was forked and rebuild on modern image with some changes.
 
 
 
@@ -13,14 +14,14 @@
 
 Click on the following badge to launch a notebook on the `https://mybinder.org` service.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/SCiO-systems/cgspatial-notebook/master)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/aturant/cgspatial-notebook/master)
 
 ## Docker Hub
-* Docker Hub [hub.docker.com/](https://hub.docker.com/) not exists now :()
+* Docker Hub [hub.docker.com/](https://hub.docker.com/) not exists yet :()
 
 Docker Pull Command for Docker image.
 ```
-docker pull scioquiver/notebooks:cgs
+docker pull aturant/cgspatial-notebook:latest
 ```
 
 
@@ -112,10 +113,11 @@ docker pull scioquiver/notebooks:cgs
 * [ipyleaflet](https://pypi.org/project/ipyleaflet/ "ipyleaflet")
 * [scikit-learn](https://pypi.org/project/scikit-learn/ "scikit-learn")
 * [scikit-image](https://pypi.org/project/scikit-image/ "scikit-image")
-* [xgboost](https://pypi.org/project/xgboost/ "xgboost")
-* [Keras](https://pypi.org/project/Keras/ "Keras")
-* [tensorflow](https://pypi.org/project/tensorflow/ "tensorflow")
-* [PyTorch](https://pytorch.org/ "PyTorch")
+* [xgboost](https://pypi.org/project/xgboost/ "xgboost") not installed
+* [Keras](https://pypi.org/project/Keras/ "Keras") not installed
+* [tensorflow](https://pypi.org/project/tensorflow/ "tensorflow") not installed
+* [PyTorch](https://pytorch.org/ "PyTorch") not installed
++sqlAlchemy +psycopg
 
 # References
 
