@@ -1,7 +1,7 @@
 .PHONY: help build dev test test-env
 
 # Docker image name and tag
-IMAGE:=scioquiver/notebooks
+IMAGE:=aturant/notebooks
 TAG?=cgspatial-notebook-6.5.2
 # Shell that make should use
 SHELL:=bash

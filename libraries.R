@@ -3,7 +3,7 @@ library(devtools)
 #install.packages("rJava",dependencies=TRUE, repos='http://cran.rstudio.com/')
 
 install.packages("spDataLarge",dependencies=TRUE,repos='https://nowosad.github.io/drat/', type='source')
-install.packages("RColorBrewer",dependencies=TRUE,repos='https://nowosad.github.io/drat/', type='source')
+install.packages("RColorBrewer",dependencies=TRUE)
 install.packages("raster",dependencies=TRUE, repos='http://cran.rstudio.com/')
 install.packages("sp",dependencies=TRUE, repos='http://cran.rstudio.com/')
 install.packages("devtools",dependencies=TRUE, repos='http://cran.rstudio.com/')

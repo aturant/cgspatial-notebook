@@ -1,6 +1,8 @@
 ARG BASE_CONTAINER=jupyter/datascience-notebook:notebook-6.5.2
 FROM $BASE_CONTAINER
 
+#ARG BASE_CONTAINER=jupyter/datascience-notebook:notebook-6.5.2
+
 USER root
 
 
@@ -17,7 +19,7 @@ RUN pip install shapely && \
 #    pip install tensorflow && \
 
 RUN apt-get update && apt-get install software-properties-common -y
-RUN add-apt-repository ppa:ubuntugis/ubuntugis-unstable && apt-get update
+RUN add-apt-repository ppa:ubuntugis/ubuntugis-unstable && apt-get update && apt-get upgrade
 RUN apt-get install gdal-bin -y && apt-get install libgdal-dev -y
 RUN export CPLUS_INCLUDE_PATH=/usr/include/gdal && export C_INCLUDE_PATH=/usr/include/gdal
 
@@ -39,7 +41,10 @@ RUN apt-get install unrar -y && \
 #RUN conda install -c conda-forge r-velox && \
 #    conda install -c conda-forge r-rjava
 
-RUN conda install -c conda-forge r-rjava
+RUN conda remove  r-base && \
+    conda install r-base=3.6.3
+
+RUN conda install -c conda-forge r-rjava 
 
 RUN apt-get remove pkg-config -y
 
