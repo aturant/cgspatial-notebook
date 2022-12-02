@@ -16,11 +16,11 @@ Click on the following badge to launch a notebook on the `https://mybinder.org` 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/SCiO-systems/cgspatial-notebook/master)
 
 ## Docker Hub
-* Docker Hub [hub.docker.com/r/scioquiver/notebooks](https://hub.docker.com/r/scioquiver/notebooks)
+* Docker Hub [hub.docker.com/](https://hub.docker.com/) not exists now :()
 
 Docker Pull Command for Docker image.
 ```
-docker pull scioquiver/notebooks:cgspatial-notebook
+docker pull scioquiver/notebooks:cgs
 ```
 
 
