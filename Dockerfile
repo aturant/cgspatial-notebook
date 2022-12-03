@@ -60,6 +60,6 @@ RUN mamba install --quiet --yes \
 #     conda install --quiet --yes 'r-ncdf4'
 
 
-RUN Rscript libraries.R
+#RUN Rscript libraries.R
 
 ADD extra/maxent.jar /opt/conda/lib/R/library/dismo/java/maxent.jar
