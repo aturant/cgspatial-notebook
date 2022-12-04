@@ -5,7 +5,7 @@ install.packages("raster",dependencies=TRUE, repos='http://cran.rstudio.com/')
 install.packages("sp",dependencies=TRUE, repos='http://cran.rstudio.com/')
 install.packages("devtools",dependencies=TRUE, repos='http://cran.rstudio.com/')
 install.packages("maptools",dependencies=TRUE, repos='http://cran.rstudio.com/')
-#install.packages("rgdal",dependencies=TRUE, repos='http://cran.rstudio.com/')
+#install.packages("rgdal",dependencies=TRUE, repos='http://cran.rstudio.com/') --> conda 
 install.packages("rgeos",dependencies=TRUE, repos='http://cran.rstudio.com/')
 install.packages("dplyr",dependencies=TRUE, repos='http://cran.rstudio.com/')
 install.packages("tidyr",dependencies=TRUE, repos='http://cran.rstudio.com/')
@@ -22,7 +22,7 @@ install.packages("geosphere",dependencies=TRUE, repos='http://cran.rstudio.com/'
 install.packages("RandomFields",dependencies=TRUE, repos='http://cran.rstudio.com/')
 install.packages("randomForest",dependencies=TRUE, repos='http://cran.rstudio.com/')
 install.packages("rpart",dependencies=TRUE, repos='http://cran.rstudio.com/')
-#install.packages("sf",dependencies=TRUE, repos='http://cran.rstudio.com/')
+#install.packages("sf",dependencies=TRUE, repos='http://cran.rstudio.com/')--> conda 
 install.packages("spdep",dependencies=TRUE, repos='http://cran.rstudio.com/')
 install.packages("XML",dependencies=TRUE, repos='http://cran.rstudio.com/')
 install.packages("spData",dependencies=TRUE, repos='http://cran.rstudio.com/')

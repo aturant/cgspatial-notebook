@@ -15,6 +15,8 @@ RUN apt-get update && \
     apt-get install libgdal-dev -y && \
     apt-get install libproj-dev -y && \
     apt-get install proj-bin -y && \
+    apt-get install libudunits2-dev 
+    apt-get install libgeos-dev && \
     apt-get clean && \    
     apt-get autoremove --purge && \
     apt-get remove pkg-config -y
@@ -45,19 +47,11 @@ RUN mamba install --quiet --yes \
     'r-rgeos' \
     'r-geojsonio' \
     'r-spdep' \
-    'r-ncdf4' && \
+    'r-ncdf4' \
+    'r-sf' && \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
-
-
-
-#RUN  conda install --quiet --yes 'r-rgdal' && \
-#     conda install --quiet --yes 'r-rgeos' && \
-#     conda install --quiet --yes 'r-geojsonio' && \
-#     conda install --quiet --yes 'r-spdep' && \
-#     conda install --quiet --yes 'r-rcolorbrewer' && \
-#     conda install --quiet --yes 'r-ncdf4'
 
 
 #RUN Rscript libraries.R
