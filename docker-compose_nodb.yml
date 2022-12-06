@@ -1,0 +1,28 @@
+version: "3.9"
+name: dev_stack
+services:
+ jupyter_hub:
+  image: aturant/notebooks:cgspatial-notebook-6.5.2
+  volumes:
+    - jupyter_wd:/home/jovyan
+  container_name: jupyter_hub
+  ports:
+   - "8888:8888"
+  networks:
+   - hostnet
+  environment:
+   - DOCKER_STACKS_JUPYTER_CMD=lab
+  restart: always
+
+
+volumes:
+  jupyter_wd:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ${JUPYTER_WD}
+
+networks:
+ hostnet:
+  driver: bridge

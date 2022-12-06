@@ -15,8 +15,8 @@ RUN apt-get update && \
     apt-get install libgdal-dev -y && \
     apt-get install libproj-dev -y && \
     apt-get install proj-bin -y && \
-    apt-get install libudunits2-dev 
-    apt-get install libgeos-dev && \
+    apt-get install libudunits2-dev -y && \
+    apt-get install libgeos-dev -y && \
     apt-get clean && \    
     apt-get autoremove --purge && \
     apt-get remove pkg-config -y
@@ -28,6 +28,9 @@ RUN export CPLUS_INCLUDE_PATH=/usr/include/gdal && export C_INCLUDE_PATH=/usr/in
 
 COPY requirements.txt libraries.R ./
 RUN pip install -r requirements.txt
+##########################################################################################
+
+RUN jupyter lab build
 
 ##########################################################################################
 
@@ -48,7 +51,8 @@ RUN mamba install --quiet --yes \
     'r-geojsonio' \
     'r-spdep' \
     'r-ncdf4' \
-    'r-sf' && \
+    'r-sf' \
+    'jupyterlab' && \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"

@@ -9,7 +9,15 @@ SQLAlchemy
 psycopg2
 pcse
 jupyterhub>=1.0.0
+ipython-sql
+jupyterlab_sql
+jupyterlab-git
+lckr-jupyterlab-variableinspector
+jupyterlab-system-monitor
+jupyter_bokeh
+aquirdturtle_collapsible_headings
 plotly-express
+seaborn
 #xgboost
 #torch 
 #torchvision
