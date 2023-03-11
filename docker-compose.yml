@@ -4,7 +4,7 @@ services:
  jupyter_hub:
   image: aturant/cgspatial-notebook:r-3.6.3
   volumes:
-    - jupyter_wd:/home/jovyan
+    - ${JUPYTER_WD}:/home/jovyan
   container_name: jupyter_hub
   ports:
    - "8888:8888"
@@ -12,28 +12,8 @@ services:
    - hostnet
   environment:
    - DOCKER_STACKS_JUPYTER_CMD=lab
-  depends_on:
-   - db_postgis
   restart: always
 
- db_postgis:
-  image: postgis/postgis:14-3.3
-  volumes:
-   - pg_database_location:/var/lib/postgresql/data
-  container_name: postgis_service
-  ports:
-   - "5432:5432"
-  networks:
-   - hostnet
-  environment:
-   - POSTGRES_USER=postgres
-   - POSTGRES_PASSWORD=postgres
-  restart: always
-  healthcheck:
-   test: [“CMD-SHELL”, “pg_isready”]
-   interval    : 1s
-   timeout: 5s
-   retries: 10
 
 volumes:
   jupyter_wd:
@@ -42,13 +22,8 @@ volumes:
       o: bind
       type: none
       device: ${JUPYTER_WD}
-  pg_database_location:
-    driver: local
-    driver_opts:
-      o: bind
-      type: none
-      device: ${PG_DATABASE_LOCATION}
 
 networks:
  hostnet:
   driver: bridge
+
